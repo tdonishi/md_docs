@@ -1,3 +1,7 @@
 function s = sum_1_to_n(n)
-    s = n * (n + 1) / 2;
+    if n <= 1
+        s = n;
+    else
+        s = n + sum_1_to_n(n - 1);
+    end
 end
